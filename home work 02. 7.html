@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Home work 02.7</title>
+<body>
+
+</body>
+
+<script>
+
+var password = "Passw0rd!";
+
+var userInput = prompt("Введите свой пароль", "");
+
+    if (userInput == password) {
+    	alert("Вы успешно вошли в систему!");
+    } else if (userInput == null) {
+    		alert("Доступ запрещен!");
+    	} else {
+    			alert("Внимание! Вы ввели не верный пароль.\nУ вас пять попыток для ввода правильного пароля.");
+
+    			for (var i = 4; i >= 0 ; i--) {
+    				userInput = prompt("Введите правильный пароль", "");
+    		
+    				if (userInput == password) {
+    					alert("Вы успешно вошли в систему!");
+    					break;
+    				} else if (userInput == null) {
+							alert("Доступ запрещен!");
+							break;
+    					} else {
+		    				switch (i) {
+		    					case 4:
+		    					alert("Внимание! Вы ввели не верный пароль\nУ вас осталось четыре попытки");
+		    					break;
+
+		    					case 3:
+		    					alert("Внимание! Вы ввели не верный пароль\nУ вас осталось три попытки");
+		    					break;
+
+		    					case 2:
+		    					alert("Внимание! Вы ввели не верный пароль\nУ вас осталось две попытки");
+		    					break;
+
+		    					case 1:
+		    					alert("Внимание! Вы ввели не верный пароль\nУ вас осталось последняя попытка");
+		    					break;
+
+		    					default:
+		    					alert("Вам отказано в доступе.\nПопробуйте позже.");
+
+		    				}
+		    			}
+    			}
+    		}
+      
+</script>
+
+</html>

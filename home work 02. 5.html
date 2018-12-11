@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 02. 5</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+
+		<p class="header">Факториал числа</p>
+
+	</body>
+
+	<style>
+		.header{
+			font-size: 25px;
+			font-weight: bold;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		//Факториал числа
+
+		var factorial = 1;
+
+		while (true) {
+
+			var namberUser = prompt("Введите любое число", "");
+		
+			if (!isNaN(parseFloat(namberUser)) && isFinite(namberUser)) {
+				for (var i = 1; i <= namberUser; i++){
+					factorial = factorial * i;
+				}
+				break
+			} else {
+				alert("Это не число\nПовторите попытку");
+			}
+		}
+
+		document.write(factorial);
+
+	</script>
+</html>

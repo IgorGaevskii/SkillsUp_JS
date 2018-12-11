@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 02. 3</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<p class="header">Сумма чисел от 1 до 200 которые делятся на 3 без остатка с помощью констркции for () {}</p>
+		<p id="first answer"></p>
+
+		<p class="header">Сумма чисел от 1 до 200 которые делятся на 5 без остатка с помощью констркции while () {}</p>
+		<p id="second answer"></p>
+
+		<p class="header">Сумма чисел от 1 до 200 которые делятся на 3 и на 5 без остатка с помощью констркции do {} while ()</p>
+		<p>При делении на 3 сумма равна <span id="third answer"></span></p>
+		<p>При делении на 5 сумма равна <span id="fourth answer"></span></p>
+	</body>
+
+	<style>
+		.header{
+			font-size: 25px;
+			font-weight: bold;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		//Сумма чисел с помощью конструкции for
+		var firstElementP = document.getElementById('first answer');
+		var a = 0;
+
+			for (var i = 1; i <= 200 ; i++) {
+				let remainderOfDivision = i % 3;
+				
+				if (remainderOfDivision === 0) {
+					a += i;
+				}
+			}
+
+		firstElementP.innerHTML = a;
+
+		//Сумма чисел с помощью конструкции while
+		var secondElementP = document.getElementById('second answer');
+		var b = 0;
+		i = 1;
+
+			while (i <= 200) {
+				let remainderOfDivision = i % 5;
+
+				if (remainderOfDivision === 0) {
+					b += i;
+				}
+
+				i++;
+			}
+
+		secondElementP.innerHTML = b;
+
+		//Сумма чисел с помощью конструкции do while
+		var firstElementSpan = document.getElementById('third answer');
+		var secondElementSpan = document.getElementById('fourth answer');
+		var c = 0, d = 0;
+		i = 1;
+		
+			do {
+				let divideByThree = i % 3;
+				let divideByFive = i % 5;
+
+				if (divideByThree === 0) {
+					c += i;
+				}
+				if (divideByFive === 0) {
+					d += i;
+				}
+
+				i++;
+			} while (i <= 200);
+
+		firstElementSpan.innerHTML = c;
+		secondElementSpan.innerHTML = d;
+
+	</script>
+</html>

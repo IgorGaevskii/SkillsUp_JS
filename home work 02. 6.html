@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Home work 02.6</title>
+<body>
+
+</body>
+
+<script>
+
+var europeanSize;
+var internationalSize = prompt("Введите размер в международном формате:").toLowerCase().trim();
+
+switch (internationalSize) {
+
+	case "xs":
+		europeanSize = "32-36";
+		alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+		break;
+	
+	case "s":
+		europeanSize = "36-40";
+		alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+		break;
+
+	case "m":
+		europeanSize = "40-44";
+		alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+		break;
+
+	case "l":
+		europeanSize = "44-48";
+		alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+		break;
+
+	case "xl":
+		europeanSize = "48-52";
+		alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+		break;
+
+	case "xxl":
+		europeanSize = "52-56";
+		alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+		break;
+
+	default:
+		alert(internationalSize + " не является размером одежды в международном формате");
+
+}
+
+</script>
+
+</html>

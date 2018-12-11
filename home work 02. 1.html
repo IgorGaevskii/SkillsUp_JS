@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 02. 1</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<p class="header">Вывод чисел от 100 до -100 с помощью констркции for () {}</p>
+		<p id="first answer"></p>
+
+		<p class="header">Вывод чисел от 100 до -100 с помощью конструкции while () {}</p>
+		<p id="second answer"></p>
+
+		<p class="header">Вывод чисел от 100 до -100 с помощью конструкции do {} while ()</p>
+		<p id="third answer"></p>
+	</body>
+
+	<style>
+		.header{
+			font-size: 30px;
+			font-weight: bold;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		//Вывод чисел с помощью конструкции for
+		var firstElementP = document.getElementById('first answer');
+		var a = " ";
+
+			for (var i = 100; i >= -100 ; i--) {
+				a += i + ", ";
+			}
+
+		firstElementP.innerHTML = a;
+
+		//Вывод чисел с помощью конструкции while
+		var secondElementP = document.getElementById('second answer');
+		var b = " ";
+		i = 100;
+
+			while (i >= -100) {
+				b += i + ", ";
+				i--;
+			}
+
+		secondElementP.innerHTML = b;
+
+		//Вывод чисел с помощью конструкции do while
+		var thirdElementP = document.getElementById('third answer');
+		var c = " ";
+		i = 100;
+		
+			do {
+				c += i + ", ";
+				i--;
+			} while (i >= -100);
+
+		thirdElementP.innerHTML = c;
+	</script>
+</html>
