@@ -26,51 +26,49 @@
 	<script type="text/javascript">
 
 		//Вывод чисел с помощью конструкции for
-		var firstElementP = document.getElementById('first answer');
+
 		var a = " ";
 
 			for (var i = 150; i <= 200 ; i++) {
-				let remainderOfDivision = i % 2;
 				
-				if (remainderOfDivision === 0) {
+				if ( (i % 2) === 0) {
 					a += i + ", ";
 				}
 			}
 
-		firstElementP.innerHTML = a;
+		document.getElementById('first answer').innerHTML = a;
 
 		//Вывод чисел с помощью конструкции while
-		var secondElementP = document.getElementById('second answer');
+
 		var b = " ";
 		i = 150;
 
 			while (i <= 200) {
-				let remainderOfDivision = i % 2;
 
-				if (remainderOfDivision === 0) {
+				if ( (i % 2) === 0) {
 					b += i + ", ";
 				}
 
 				i++;
 			}
 
-		secondElementP.innerHTML = b;
+		document.getElementById('second answer').innerHTML = b;
 
 		//Вывод чисел с помощью конструкции do while
-		var thirdElementP = document.getElementById('third answer');
+
 		var c = " ";
 		i = 150;
 		
 			do {
-				let remainderOfDivision = i % 2;
 
-				if (remainderOfDivision === 0) {
+				if ( (i % 2) === 0) {
 					c += i + ", ";
 				}
 
 				i++;
 			} while (i <= 200);
 
-		thirdElementP.innerHTML = c;
+		document.getElementById('third answer').innerHTML = c;
+
 	</script>
 </html>
