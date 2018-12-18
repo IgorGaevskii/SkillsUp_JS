@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Home work 03.1</title>
+<body>
+
+</body>
+
+<script>
+
+var numberCoincidences = 0;
+var userInput = prompt("Введите свой Email", "");
+
+for (var i = 0; i < userInput.length; i++) {
+
+	if (userInput[i] == "@") {
+		numberCoincidences += 1;
+	}
+}
+
+if (userInput[0] == "@" || numberCoincidences != 1) {
+	alert("Ваш Email \"" + userInput + "\" невалидный.");
+} else {
+	var indexElement = userInput.indexOf("@");
+	var sliceString = userInput.slice(indexElement);
+
+	if (sliceString.indexOf(".") == -1 || sliceString.indexOf(".") < 2) {
+		alert("Ваш Email \"" + userInput + "\" невалидный.");
+	} else {
+		alert("Ваш Email \"" + userInput + "\" является валидным.");
+	}
+}
+
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>home work 03. 5</title>
+<body>
+
+</body>
+
+<script>
+
+var random = Math.floor(Math.random() * 100);
+alert(random);
+
+while (true) {
+
+	var numberUser = +prompt("Введите число", "");
+
+	if (numberUser == random) {
+		alert("Поздравляю!\nВы угадали число");
+		break;
+	} else if (numberUser > random) {
+		alert("Вы не угадали число\nВаше число больше загаданного");
+	} else {
+		alert("Вы не угадали число\nВаше число меньше загаданного")
+	}
+}
+
+</script>
+
+</html>
