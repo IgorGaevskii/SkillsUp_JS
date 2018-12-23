@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>home work 03. 7</title>
+<body>
+
+</body>
+
+<script>
+
+var random = Math.floor(Math.random() * 100);
+console.log(random);
+var numbers = " ";
+var numberAttempts = prompt("Введите количество попыток", "");
+
+while (numberAttempts > 0) {
+	var numberUser = +prompt("Введите число", "");
+	numberAttempts -= 1;
+
+	if (numberUser == random) {
+		alert("Поздравляю!\nВы угадали число");
+		break;
+	} else if (numberAttempts == 0) {
+		alert("Вы проиграли!");
+		break;
+	}else if (numberUser > random) {
+		numbers += numberUser + ", ";
+		alert("Вы не угадали число.\nВаше число больше загаданного.\nВаши введенные числа: " + numbers + "\nУ Вас осталось " + numberAttempts + " попыток.");
+	} else {
+		numbers += numberUser + ", ";
+		alert("Вы не угадали число.\nВаше число меньше загаданного.\nВаши введенные числа: " + numbers + "\nУ Вас осталось " + numberAttempts + " попыток.");
+	}
+
+}
+
+</script>
+
+</html>

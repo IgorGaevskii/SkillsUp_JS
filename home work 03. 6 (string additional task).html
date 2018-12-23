@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>home work 03. 5</title>
+<body>
+
+</body>
+
+<script>
+
+var stringUser = prompt("Введите предложение", "");
+var arrString = stringUser.split(" ");
+var i = 0;
+var newString = " ";
+
+while (i < arrString.length) {
+
+	if ((i % 2) == 1) {
+		var string = arrString[i].toUpperCase();
+	} else {
+		string = arrString[i].toLowerCase();
+	}
+	newString += string + " ";
+	i++;
+}
+
+document.write(newString);
+
+</script>
+
+</html>
