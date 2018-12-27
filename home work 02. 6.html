@@ -9,9 +9,11 @@
 <script>
 
 var europeanSize;
-var internationalSize = prompt("Введите размер в международном формате:").toLowerCase().trim();
+var internationalSize = prompt("Введите размер в международном формате:");
 
-switch (internationalSize) {
+if (internationalSize) {
+
+	switch ( internationalSize.toLowerCase().trim() ) {
 
 	case "xs":
 		europeanSize = "32-36";
@@ -46,7 +48,10 @@ switch (internationalSize) {
 	default:
 		alert(internationalSize + " не является размером одежды в международном формате");
 
+	}
 }
+
+
 
 </script>
 

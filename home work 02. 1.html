@@ -26,17 +26,17 @@
 	<script type="text/javascript">
 
 		//Вывод чисел с помощью конструкции for
-		var firstElementP = document.getElementById('first answer');
+
 		var a = " ";
 
 			for (var i = 100; i >= -100 ; i--) {
 				a += i + ", ";
 			}
 
-		firstElementP.innerHTML = a;
+		document.getElementById('first answer').innerHTML = a;
 
 		//Вывод чисел с помощью конструкции while
-		var secondElementP = document.getElementById('second answer');
+	
 		var b = " ";
 		i = 100;
 
@@ -45,10 +45,10 @@
 				i--;
 			}
 
-		secondElementP.innerHTML = b;
+		document.getElementById('second answer').innerHTML = b;
 
 		//Вывод чисел с помощью конструкции do while
-		var thirdElementP = document.getElementById('third answer');
+
 		var c = " ";
 		i = 100;
 		
@@ -57,6 +57,6 @@
 				i--;
 			} while (i >= -100);
 
-		thirdElementP.innerHTML = c;
+		document.getElementById('third answer').innerHTML = c;
 	</script>
 </html>

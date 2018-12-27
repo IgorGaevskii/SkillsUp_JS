@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Home work 03. 4</title>
+<body>
+
+</body>
+
+<script>
+
+var numberUser = +prompt("Введите число", "");
+document.write(numberUser + '<br>');
+
+if ( Number.isInteger(numberUser) ) {
+	document.write(numberUser);
+} else {
+	var numberWhole = parseInt(numberUser);
+	var numberFractional = numberUser - numberWhole;
+	var numberRounded = numberFractional.toFixed(2);
+	document.write(numberRounded);
+
+	//Старый код
+	
+	/*var indexElement = numberUser.indexOf(".");
+	var sliceString = Number(numberUser.slice(indexElement + 1, indexElement + 3));
+	document.write(sliceString);*/
+}
+
+</script>
+
+</html>

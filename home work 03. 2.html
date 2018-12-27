@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Home work 03.2</title>
+<body>
+
+</body>
+
+<script>
+
+var userInput = prompt("Введите свой Email", "");
+
+if (userInput) {
+	var indexElement = userInput.indexOf("@");
+	var beginSliceString = ( userInput.slice(0, indexElement) ).length;
+	var endSliceString = userInput.slice(indexElement);
+	var symbol = "*".repeat(beginSliceString);
+	var newEmail = symbol + endSliceString;
+	alert(newEmail);
+}
+
+</script>
+
+</html>

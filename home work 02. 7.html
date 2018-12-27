@@ -8,11 +8,31 @@
 
 <script>
 
+var attempt = 5
 var password = "Passw0rd!";
 
 var userInput = prompt("Введите свой пароль", "");
 
-    if (userInput == password) {
+while (true) {
+	
+	if (userInput == password) {
+		alert("Вы успешно вошли в систему!");
+		break;
+	} else if (userInput == null) {
+		alert("Доступ запрещен!");
+		break;
+	} else if (attempt > 0) {
+		alert("Внимание! Вы ввели не верный пароль.\nУ вас " + attempt + " попыток(ка) для ввода правильного пароля.");
+		userInput = prompt("Введите правильный пароль", "");
+		attempt -= 1;
+	} else {
+		alert("Вам отказано в доступе.\nПопробуйте позже.");
+		break;
+	}
+
+}
+
+    /*if (userInput == password) {
     	alert("Вы успешно вошли в систему!");
     } else if (userInput == null) {
     		alert("Доступ запрещен!");
@@ -52,7 +72,7 @@ var userInput = prompt("Введите свой пароль", "");
 		    				}
 		    			}
     			}
-    		}
+    		}*/
       
 </script>
 

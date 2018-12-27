@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Home work 03.3</title>
+<body>
+
+</body>
+
+<script>
+
+var a = "...";
+var text = prompt("Введите свой текст", "");
+var maxLength = prompt("Введите количество символов в строке", "");
+
+var numberSymbol = text.length;
+var maxNumberSymbol = +maxLength;
+
+if (numberSymbol > maxNumberSymbol) {
+	var beginSliceString = text.slice(0, maxNumberSymbol);
+	document.write(beginSliceString + a);
+} else if (numberSymbol < 4) {
+	document.write(a);
+} else {
+	document.write(text);
+}
+
+</script>
+
+</html>

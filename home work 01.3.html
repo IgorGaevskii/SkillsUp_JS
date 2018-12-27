@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<script>
+
+var europeanSize;
+var internationalSize = prompt("Введите размер в международном формате: ","");
+//Получаем размер в международном формате
+
+if (internationalSize == "xs" || internationalSize == "XS") { 
+	europeanSize = "32-36";
+	alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+		} else if (internationalSize == "s" || internationalSize == "S") { 
+			europeanSize = "36-40";
+			alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+				} else if (internationalSize == "m" || internationalSize == "M") {
+					europeanSize = "40-44";
+					alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+						} else if (internationalSize == "l" || internationalSize == "L") {
+							europeanSize = "44-48";
+							alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+							} else if (internationalSize == "xl" || internationalSize == "XL") {
+								europeanSize = "48-52";
+								alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+								} else if (internationalSize == "xxl" || internationalSize == "XXL") {
+									europeanSize = "52-56";
+									alert("Международному формату " + internationalSize + " соответствует европейский размер " + europeanSize);
+									} else {
+										alert(internationalSize + " не является размером одежды в международном формате");
+									}
+
+</script>
+
+</body>
+</html>
