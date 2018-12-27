@@ -10,18 +10,16 @@
 
 var stringUser = prompt("Введите предложение", "");
 var arrString = stringUser.split(" ");
-var i = 0;
 var newString = " ";
 
-while (i < arrString.length) {
+for (var 1 = 0; i < arrString.length; i++) {
 
-	if ((i % 2) == 1) {
+	if ( (i % 2) == 1 ) {
 		var string = arrString[i].toUpperCase();
 	} else {
 		string = arrString[i].toLowerCase();
 	}
 	newString += string + " ";
-	i++;
 }
 
 document.write(newString);
