@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 04. 4</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		
+	</body>
+
+	<script type="text/javascript">
+		
+		var array = [4, 67, 23, 6, 10, 15, 22];
+		document.write(array + "<br>");
+		document.write( randomElementArray() );
+
+		function randomElementArray() {
+			let randomNumber = parseInt( Math.random() * array.length );
+			for (let i = 0; i < array.length; i++) {
+				if (i == randomNumber) {
+					return array[i];
+				}
+			}
+		}
+
+	</script>
+</html>

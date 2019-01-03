@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 04. 2</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		
+	</body>
+
+	<script type="text/javascript">
+		
+		var array = [1, 5, 2, 8, 5, 7, 16, 9];
+		var filtered1 = firstFilterRange(array, 4, 9);
+		var filtered2 = secondFilterRange(array, 4, 9);
+
+		document.write("Исходный массив: " + array + "<br>");
+		document.write("Отфильтрованный массив первым способом: " + filtered1 + "<br>");
+		document.write("Отфильтрованный массив вторым способом: " + filtered2);
+
+		//Фильтрация массива через конструкцию for
+		function firstFilterRange(array, a, b) {
+			let newArray = [];
+
+			for (var i = 0; i < array.length; i++) {
+				if (array[i] >= a && array[i] <= b) {
+					newArray.push(array[i]);
+				}
+			}
+			return newArray;
+		}
+
+		//Фильтрация массива через свойство массива filter()
+		function secondFilterRange(array, a, b) {
+			return array.filter(function(element) {
+				return (element >= a && element <= b);
+			});
+		}
+
+	</script>
+</html>
