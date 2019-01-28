@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 05. 3</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="content">
+				<p>Введите число от 1 до 100</p>
+				<input type="text" id="number" autofocus>
+				<p><button id="check">Проверить</button><button id="clean">Очистеть</button></button></p>
+			</div>
+		</div>
+		
+	</body>
+
+	<style>
+		#container{
+			margin: 0 auto;
+			width: 250px;
+			height: 150px;
+			background-color: pink;
+			text-align: center;
+		}
+		#content{
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		#number{
+			text-align: center;
+		}
+		button{
+			width: 80px;
+			margin: 0 5px 0 5px;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		check.onclick = function() {
+			var number = Number(document.getElementById("number").value);
+			console.log(number);
+
+			if (number >= 1 && number <= 100) {
+				document.getElementById("number").style.backgroundColor = "green";
+			} else if (number == 0) {
+				document.getElementById("number").style.backgroundColor = "gray";
+			} else {
+				document.getElementById("number").style.backgroundColor = "red";
+			}
+		}
+
+		clean.onclick = function() {
+			location.reload();
+		}
+	</script>
+</html>

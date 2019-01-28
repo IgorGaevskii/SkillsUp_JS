@@ -1,0 +1,143 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 05. 4</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="content">
+				<h2>New task</h2>
+				<input type="text" id="nameNewTask" autofocus><button id="buttonAddTask">Add task</button>
+				<h2>List tasks</h2>
+				<ul id="listTasks">The list is empty</ul>
+				<p><button id="clean">Clean list</button></p>
+			</div>
+		</div>
+		
+	</body>
+
+	<style>
+		h2{
+			color: #ffffff;
+			padding-top: 10px;
+		}
+		#container{
+			width: 50%;
+			background-color: #008B8A;
+			margin: 0 auto;
+			text-align: center;
+		}
+		#buttonAddTask{
+			width: 100px;
+			height: 35px;
+		}
+		#nameNewTask{
+			width: 400px;
+			height: 35px;
+		}
+		#listTasks{
+			width: 100%;
+			padding: 0px;
+			font-size: 20px;
+			color: #FF0000;
+		}
+		.task{
+			list-style-type: none;
+			width: 85%;
+			height: 35px;
+			text-align: left;
+			background-color: white;
+			margin: 0 auto;
+		}
+		li{
+			position: relative;
+		}
+		strong{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-left: 10px;
+			color: #000000;
+		}
+		.buttonDelete{
+			position: absolute;
+			right: 0;
+			height: 100%;
+			width: 35px;
+			color: #FF0000;
+		}
+		#clean{
+			width: 100px;
+			height: 30px;
+			border-radius: 8px;
+			margin-bottom: 10px;
+		}
+		
+	</style>
+
+	<script type="text/javascript">
+		var replaceElement = "";
+		var ulBlock = document.getElementById("listTasks");
+		document.getElementById("clean").disabled = true;
+
+		//Добавляем элемент li в ul
+		buttonAddTask.onclick = function() {
+
+			var nameNewTask = document.getElementById("nameNewTask").value;
+			
+			if (ulBlock.firstChild.nodeType == 3) {
+				replaceElement = ulBlock.replaceChild(createElementLi(nameNewTask), ulBlock.firstChild);
+			} else {
+				ulBlock.appendChild( createElementLi(nameNewTask) );
+			}
+			//После ввода очередной задачи очищаем поле ввода
+			document.getElementById("nameNewTask").value = " ";
+
+			if (ulBlock.children.length > 0) {
+				document.getElementById("clean").disabled = false;
+				for (var i = 0; i < ulBlock.children.length; i++) {
+					if (i % 2 != 0) {
+						ulBlock.children[i].style.backgroundColor = "#FFF5EE";
+					}
+				}
+			}
+		}
+
+		function createElementLi(nameNewTask) {
+			var liElement = document.createElement("li");
+			liElement.className = "task";
+
+			var strongElement = document.createElement("strong");
+			strongElement.innerHTML = nameNewTask;
+			liElement.appendChild(strongElement);
+
+			var buttonDelete = document.createElement("button");
+			buttonDelete.innerHTML = "X";
+			buttonDelete.className = "buttonDelete"
+			buttonDelete.onclick = function() {
+			event.target.parentNode.remove();
+				if (ulBlock.children.length == 0) {
+					disabledButtonClean();
+				}
+			}
+			liElement.appendChild(buttonDelete);
+
+			return liElement;
+		}
+
+		clean.onclick = function() {
+			while (ulBlock.firstChild) {
+				ulBlock.removeChild(ulBlock.firstChild);
+			}
+			disabledButtonClean();
+		}
+
+		function disabledButtonClean() {
+			ulBlock.innerHTML = replaceElement.nodeValue;
+			document.getElementById("clean").disabled = true;
+		}
+		
+	</script>
+</html>
