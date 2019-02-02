@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 06.2</title>
+		<meta charset="utf-8">
+	</head>
+
+	<style>
+		#center{
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+
+	<body>
+		<img src="flowers-1.png" id="center">
+	</body>
+
+	<script type="text/javascript">
+		
+		center.onmouseover = function() {
+			this.removeAttribute("src");
+			this.setAttribute("src", "flowers-2.png");
+		}
+
+		center.onmouseout = function() {
+			this.removeAttribute("src");
+			this.setAttribute("src", "flowers-1.png");
+		}
+
+	</script>
+</html>

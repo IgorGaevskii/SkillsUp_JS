@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>home work 06.1</title>
+		<meta charset="utf-8">
+	</head>
+
+	<style>
+		ul{
+			margin: 0 auto;
+			width: 70%;
+			height: 50px;
+			background-color: pink;
+			list-style: none;
+			text-align: center;
+			line-height: 50px;
+		}
+		li{
+			display: inline-block;
+			padding: 0 15px;
+			font-size: 25px;
+
+		}
+		.red{
+			color: red;
+		}
+	</style>
+
+	<body>
+		<ul id="menu">
+			<li>Главная</li>
+			<li>Наши работы</li>
+			<li>Отзывы</li>
+			<li>Контакты</li>
+		</ul>
+	</body>
+
+	<script type="text/javascript">
+		menu.onclick = function(event){
+
+			if ( event.target != document.getElementById("menu") ) {
+
+				if ( event.target.classList.contains("red") ) {
+					event.target.classList.remove("red");
+				} else {
+					var elementLi = document.getElementById("menu").getElementsByTagName("li");
+
+						for (var i = 0; i < elementLi.length; i++) {
+						
+							if ( elementLi[i].classList.contains("red") ) {
+								elementLi[i].classList.remove("red");
+							}
+						}
+					event.target.classList.add("red");
+				}
+			}
+		}		 
+	</script>
+</html>
